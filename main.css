@@ -1,0 +1,133 @@
+
+
+/* reset css */
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.wrap {
+    background: #e9ecef;
+    padding-top: 64px;
+    height: 100vh;
+}
+
+section.container {
+    width: 30%;
+    height: 545px;
+    padding: 25px;
+    background:#6fdbb9;
+    border-radius: 45px;
+    font-size: 14px;
+    margin: 0 auto;
+    box-shadow: 0 0 0.7;
+    box-shadow: 0 0 10px rgba(0,0,0, 0.8);
+}
+
+section.calTemplete {
+    background: #ffefc4;
+    border-radius: 35px;
+    padding: 50px 50px;
+    position: relative;
+}
+
+#show {
+    display: inline-block;
+    /* line-height: 2em; */
+    border-radius: 10px;
+    width: 79%;
+    height: 20px;
+    background: #dfc9c9;
+    display: flex;
+    align-items: center;
+    text-align: right;
+    font-size: 30px;
+    position: absolute;
+    top: 1%;
+}
+
+section.calTemplete .buttons {
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 55px;
+    grid-gap: 15px;
+}
+
+section.calTemplete .buttons button {
+    border-radius: 10px;
+    background: #797373;
+    border: 0;
+    cursor: pointer;
+    color: #fff;
+    font-size: 20px;
+}
+
+section.calTemplete .buttons .double {
+    grid-column: 3/5; 
+}
+
+section.calTemplete .buttons .plusMinus,
+section.calTemplete .buttons .mul,
+section.calTemplete .buttons .minus,
+section.calTemplete .buttons .divisor, 
+section.calTemplete .buttons .plus,
+section.calTemplete .buttons .dec,
+section.calTemplete .buttons .answer {
+    background: rgb(248, 136, 71);
+}
+
+section.calTemplete .buttons .num:hover{
+    background: #a59d9d;
+}
+
+section.calTemplete .buttons .num:active{
+    background: #bdb6b6;
+}
+
+section.calTemplete .buttons .clear:hover{
+    background: #a59d9d;
+}
+
+section.calTemplete .buttons .clear:active{
+    background: #bdb6b6;
+}
+
+section.calTemplete .buttons .delete:hover{
+    background: #a59d9d;
+}
+
+section.calTemplete .buttons .delete:active{
+    background: #bdb6b6;
+} 
+
+section.calTemplete .buttons button:hover{
+    background: rgb(252, 124, 49);
+}
+
+section.calTemplete .buttons button:active{
+    background: rgb(253, 93, 0);
+}
+
+
+
+
+#result {
+    display: inline-block;
+    /* line-height: 2em; */
+    border-radius: 10px;
+    width: 100%;
+    height: 70px;
+    background: #dfc9c9;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    text-align: right;
+    font-size: 30px;
+}
+
+
+
+
+
+
