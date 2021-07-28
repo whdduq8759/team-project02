@@ -224,3 +224,15 @@ function plusMinus() {
 // 할 것
 
 // ppt
+
+
+
+Array.from(document.querySelectorAll('.number')).forEach(a => {
+    a.addEventListener('click', function () {
+        if (input.innerText.length <= 19) {
+            input.innerText = input.innerText + this.innerText
+        } else {
+            alert("최대 입력 범위를 초과했습니다!")
+        }
+    });
+}),
