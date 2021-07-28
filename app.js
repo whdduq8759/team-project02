@@ -19,6 +19,16 @@ function addNum(num) {
   $resultDiv.textContent += num;
 }
 
+// 19자리수 초과 제한 함수
+function over(target) {
+  if($show.value.length > 19){
+    console.log("19글자 넘음");
+    // alert('19글자를 초과했습니다!');
+    target.preventDefault();
+
+  }
+}
+
 // =을 눌렀을 때 div값이 input으로 올라가게 하는 함수
 function upResult(up) {
   $show.value = up;
@@ -104,18 +114,17 @@ function clear() {
 }
 
 
-// +/-버튼 클릭 함수
+// +/-함수
 function plusMinus() {
   if ($show.hasAttribute('value')) {
 
     // 양수를 음수로 음수를 양수로 바꿔주는 변수 선언
-    const conversionNum = $show.value + '*(-1)';
+    const conversionNum = +$show.value * -1;
 
     $show.value = conversionNum;
     $show.setAttribute('value', $show.value);
   }
 }
-
 
 
 
@@ -132,11 +141,13 @@ function plusMinus() {
 
   // 숫자 버튼 클릭 이벤트 
   $buttons.addEventListener('click', e => {
+    over(e.target);
     if (e.target.matches('.num')) {
       console.log('숫자버튼 클릭!');
       addNum(e.target.textContent);
-
     }
+
+
   });
 
   // 연산 버튼 클릭 이벤트
@@ -205,3 +216,6 @@ function plusMinus() {
 })();
 
 
+
+
+// 

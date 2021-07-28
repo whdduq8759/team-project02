@@ -1,5 +1,7 @@
 
 
+
+
 /* reset css */
 a {
     color: inherit;
@@ -13,15 +15,15 @@ a {
 }
 
 section.container {
-    width: 30%;
-    height: 545px;
+    width: 27%;
+    height: 570px;
     padding: 25px;
     background:#6fdbb9;
     border-radius: 45px;
     font-size: 14px;
     margin: 0 auto;
     box-shadow: 0 0 0.7;
-    box-shadow: 0 0 10px rgba(0,0,0, 0.8);
+    box-shadow: 15px 15px 0px rgba(103, 144, 150, 0.8);
 }
 
 section.calTemplete {
@@ -35,15 +37,19 @@ section.calTemplete {
     display: inline-block;
     /* line-height: 2em; */
     border-radius: 10px;
+    border: 1px solid rgb(175, 175, 175);
     width: 79%;
     height: 20px;
     background: #dfc9c9;
     display: flex;
     align-items: center;
     text-align: right;
-    font-size: 30px;
+    font-size: 20px;
+    padding: 2px;
     position: absolute;
     top: 1%;
+    margin-top: 30px;
+    color: rgb(102, 101, 101);
 }
 
 section.calTemplete .buttons {
@@ -72,41 +78,60 @@ section.calTemplete .buttons .mul,
 section.calTemplete .buttons .minus,
 section.calTemplete .buttons .divisor, 
 section.calTemplete .buttons .plus,
-section.calTemplete .buttons .dec,
 section.calTemplete .buttons .answer {
-    background: rgb(248, 136, 71);
+    background: #ff8747;
+    box-shadow: 3px 3px 0px rgba(253, 93, 0);
+
 }
 
-section.calTemplete .buttons .num:hover{
-    background: #a59d9d;
+section.calTemplete .buttons .plusMinus:hover,
+section.calTemplete .buttons .mul:hover,
+section.calTemplete .buttons .minus:hover,
+section.calTemplete .buttons .divisor:hover, 
+section.calTemplete .buttons .plus:hover,
+section.calTemplete .buttons .answer:hover {
+    background: #fc7c31;
 }
 
-section.calTemplete .buttons .num:active{
-    background: #bdb6b6;
+section.calTemplete .buttons .plusMinus:active,
+section.calTemplete .buttons .mul:active,
+section.calTemplete .buttons .minus:active,
+section.calTemplete .buttons .divisor:active, 
+section.calTemplete .buttons .plus:active,
+section.calTemplete .buttons .answer:active {
+    background: #fd5d00;
 }
 
-section.calTemplete .buttons .clear:hover{
-    background: #a59d9d;
+section.calTemplete .buttons .num,
+section.calTemplete .buttons .dot {
+    background: #797373;
+    box-shadow: 3px 3px 0px rgba(90, 88, 88);
 }
 
-section.calTemplete .buttons .clear:active{
-    background: #bdb6b6;
+section.calTemplete .buttons .num:hover,
+section.calTemplete .buttons .dot:hover {
+    background: #666464;
 }
 
-section.calTemplete .buttons .delete:hover{
-    background: #a59d9d;
+section.calTemplete .buttons .num:active,
+section.calTemplete .buttons .dot:active {
+    background: #5a5858;
 }
 
-section.calTemplete .buttons .delete:active{
-    background: #bdb6b6;
-} 
-
-section.calTemplete .buttons button:hover{
-    background: rgb(252, 124, 49);
+section.calTemplete .buttons .delete,
+section.calTemplete .buttons .clear {
+    background: #fa413a;
+    box-shadow: 3px 3px 0px rgba(248, 24, 17);
 }
 
-section.calTemplete .buttons button:active{
-    background: rgb(253, 93, 0);
+section.calTemplete .buttons .clear:hover,
+section.calTemplete .buttons .delete:hover {
+    background: #f82f28;;
+}
+
+section.calTemplete .buttons .clear:active,
+section.calTemplete .buttons .delete:active {
+    background: #f81811;
 }
 
 
@@ -116,6 +141,7 @@ section.calTemplete .buttons button:active{
     display: inline-block;
     /* line-height: 2em; */
     border-radius: 10px;
+    border: 1px solid rgb(175, 175, 175);
     width: 100%;
     height: 70px;
     background: #dfc9c9;
@@ -124,10 +150,6 @@ section.calTemplete .buttons button:active{
     align-items: center;
     text-align: right;
     font-size: 30px;
+    margin-top: 30px;
+    color: rgb(97, 96, 96);
 }
-
-
-
-
-
-
