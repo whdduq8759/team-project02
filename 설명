@@ -1,0 +1,22 @@
+공통 설명
+계산기의 버튼을 눌렀을 떄 if (e.target.matches()) {}을 사용하여 해당 버튼을 눌렀을 때 이벤트가 터지게 했고, 버튼을 눌렀을 때 textContent을 함수에 담고, 
+
+1. 숫자 버튼 클릭  
+그 함수는 textContent를 input에 value값으로 저장하여 화면에 나오게 하고, div에 textContent로 저장하여 화면에 나오게 했음
+버튼을 계속 눌렀을 때 연속으로 나오게 하기 위해  $show.value += num;, $resultDiv.textContent += num; 을 사용함
+
+2. 연산 버튼 클릭
+
+
+
+3. = 버튼 클릭 
+
+4. +/- 버튼 클릭
+
+5. 점 버튼 클릭
+
+6. AC 버튼 클릭
+
+7. C 버튼 클릭
+
+8. input과 div 출력 값 
