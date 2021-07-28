@@ -1,4 +1,5 @@
 //변수 선언
+
 // 숫자 저장 배열
 let numArray = [];
 // C버튼 클릭 카운트
@@ -6,31 +7,27 @@ let count = 0;
 
 const $resultDiv = document.querySelector('#result');
 
-// input 창
+// input 노드
 let $show = document.getElementById('show');
 
 
 //함수 정의
-// 숫자 함수
+// 숫자버튼 클릭 함수
 function addNum(num) {
   $show.value += num;
   $show.setAttribute('value', $show.value);
   $resultDiv.textContent += num;
 }
 
-// 값 상승 함수
+// =을 눌렀을 때 div값이 input으로 올라가게 하는 함수
 function upResult(up) {
   $show.value = up;
+  
 }
 
-// 두번 째 연산 div 공백 함수
-function diva() {
-  if($resultDiv.hasAttribute('value')) {
-   
-  }
-}
 
-// 연산 함수
+
+// 연산버튼 클릭 함수
 function calculate(sign) {
   let result = '';
   if (sign === '+' && $show.hasAttribute('value')) {
@@ -48,16 +45,13 @@ function calculate(sign) {
   } else if (sign === '=' && $show.hasAttribute('value')) {
     
     // answer = (new Function ('return '+$show.value))(); 
+    
     result = eval($show.value); // : 수정코드
     $resultDiv.textContent = result;
     console.log($resultDiv);
 
     $show.value += ' =';
     upResult(result);
-    diva();
-
-     
-
 
 
 
@@ -69,8 +63,6 @@ function calculate(sign) {
     // $show.value = result;
     // $show.setAttribute('value', result);
 
-
-
   }
 
   // 배열에 값 저장
@@ -79,7 +71,7 @@ function calculate(sign) {
 
 }
 
-// .(점) 함수
+// .(점)버튼 클릭 함수
 function dot(point) {
   if ($show.hasAttribute('value')) {
 
@@ -94,9 +86,7 @@ function dot(point) {
 }
 
 
-
-
-// AC 함수
+// AC버튼 클릭 함수
 function allClear() {
   $show.value = '';
   numArray.splice(0, numArray.length);
@@ -114,7 +104,7 @@ function clear() {
 }
 
 
-// +/-함수
+// +/-버튼 클릭 함수
 function plusMinus() {
   if ($show.hasAttribute('value')) {
 
@@ -133,6 +123,7 @@ function plusMinus() {
 
 //실행부 
 (function () {
+  // 사용할 노드
   const $buttons = document.querySelector('.buttons');
   const $show = document.getElementById('show');
   const $dot = document.querySelector('.dot');
@@ -151,6 +142,7 @@ function plusMinus() {
   // 연산 버튼 클릭 이벤트
   $buttons.addEventListener('click', e => {
     if (e.target.matches('.plus') || e.target.matches('.minus') || e.target.matches('.divisor') || e.target.matches('.mul') || e.target.matches('.answer')) {
+      console.log('연산버튼 클릭!');
       calculate(e.target.textContent);
 
 
@@ -163,7 +155,7 @@ function plusMinus() {
   //  .(점)버튼 클릭 이벤트
   $buttons.addEventListener('click', e => {
     if (e.target.matches('.dot')) {
-      console.log('점 클릭!');
+      console.log('점버튼 클릭!');
       dot(e.target.textContent);
 
 
@@ -174,7 +166,7 @@ function plusMinus() {
   // AC버튼 클릭 이벤트
   $buttons.addEventListener('click', e => {
     if (e.target.matches('.clear')) {
-      console.log('올클리어 클릭!');
+      console.log('올클리어버튼 클릭!');
       allClear();
 
     }
@@ -184,7 +176,7 @@ function plusMinus() {
   // C버튼 클릭 이벤트
   $buttons.addEventListener('click', e => {
     if (e.target.matches('.delete')) {
-      console.log('삭제 클릭!');
+      console.log('삭제버튼 클릭!');
       count = numArray.length + 1;
       count--;
       console.log(count);
@@ -201,7 +193,7 @@ function plusMinus() {
   // +/-버튼 클릭 이벤트
   $buttons.addEventListener('click', e => {
     if (e.target.matches('.plusMinus')) {
-      console.log('쁠마 클릭!');
+      console.log('+/-버튼 클릭!');
       plusMinus();
 
 
@@ -212,27 +204,4 @@ function plusMinus() {
 
 })();
 
-// 고쳐야 할 오류
-//  
-//  input창이랑 div창 입력 제한 19자리
-//  +/- 수정
 
-
-
-
-
-// 할 것
-
-// ppt
-
-
-
-Array.from(document.querySelectorAll('.number')).forEach(a => {
-    a.addEventListener('click', function () {
-        if (input.innerText.length <= 19) {
-            input.innerText = input.innerText + this.innerText
-        } else {
-            alert("최대 입력 범위를 초과했습니다!")
-        }
-    });
-}),
