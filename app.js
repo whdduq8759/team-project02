@@ -18,6 +18,17 @@ function addNum(num) {
   $resultDiv.textContent += num;
 }
 
+// 값 상승 함수
+function upResult(up) {
+  $show.value = up;
+}
+
+// 두번 째 연산 div 공백 함수
+function diva() {
+  if($resultDiv.hasAttribute('value')) {
+   
+  }
+}
 
 // 연산 함수
 function calculate(sign) {
@@ -42,6 +53,13 @@ function calculate(sign) {
     console.log($resultDiv);
 
     $show.value += ' =';
+    upResult(result);
+    diva();
+
+     
+
+
+
 
     // const $resultDiv = document.createElement('div');
     // $resultDiv.setAttribute('id', 'result');
@@ -195,7 +213,7 @@ function plusMinus() {
 })();
 
 // 고쳐야 할 오류
-//  계산 하고 숫자 입력시 div값이 input으로 올라가고 input 초기화
+//  
 //  input창이랑 div창 입력 제한 19자리
 //  +/- 수정
 
