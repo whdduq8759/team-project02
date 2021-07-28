@@ -15,7 +15,7 @@ let $show = document.getElementById('show');
 function addNum(num) {
   $show.value += num;
   $show.setAttribute('value', $show.value);
-  $resultDiv.textContent = num;
+  $resultDiv.textContent += num;
 }
 
 
@@ -24,12 +24,16 @@ function calculate(sign) {
   let result = '';
   if (sign === '+' && $show.hasAttribute('value')) {
     $show.value = $show.value + sign;
+    $resultDiv.textContent = '';
   } else if (sign === '-' && $show.hasAttribute('value')) {
     $show.value = $show.value + sign;
+    $resultDiv.textContent = '';
   } else if (sign === '/' && $show.hasAttribute('value')) {
     $show.value = $show.value + sign;
+    $resultDiv.textContent = '';
   } else if (sign === '*' && $show.hasAttribute('value')) {
     $show.value = $show.value + sign;
+    $resultDiv.textContent = '';
   } else if (sign === '=' && $show.hasAttribute('value')) {
     
     // answer = (new Function ('return '+$show.value))(); 
@@ -191,10 +195,14 @@ function plusMinus() {
 })();
 
 // 고쳐야 할 오류
-// 처음에 연산버튼 클릭시 계속 나오는 것 (clear)
-// input창에 계산식 나오는 것 (half-clear) 한자리수는 되는 데 두자리 수가 입력에서 한자루만 나오는 것이 발생
-// 처음에 점버튼 클릭시 계속 나오는 것 (clear)
+//  계산 하고 숫자 입력시 div값이 input으로 올라가고 input 초기화
+//  input창이랑 div창 입력 제한 19자리
+//  +/- 수정
+
+
+
+
 
 // 할 것
-// .버튼 클릭 이벤트 (clear) , C버튼 클릭 이벤트 해야함(clear),  +/- 클릭 이벤트 해야함 (clear)
+
 // ppt
